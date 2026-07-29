@@ -2,6 +2,7 @@
   <Configurations>
     <Platform Name="x64" />
   </Configurations>
+  <Project Path="Array/Array.vcxproj" Id="2e9a4853-e848-4fce-bbc8-1b8a1dcaf465" />
   <Project Path="ConsoleInput/ConsoleInput.vcxproj" Id="870a9dd1-6582-4386-a84b-2d5d18938c95" />
   <Project Path="ConsoleIO/ConsoleIO.vcxproj" Id="d0d207c0-c227-4082-a787-db64f7feab3b" />
   <Project Path="ExampleSolveProject/ExampleSolveProject.vcxproj" Id="c8d946cd-7ae8-410d-84d4-350c2984f7bf" />

@@ -119,7 +119,7 @@ private:
 	char* email;
 	char* job;
 public:
-	NameCard(const char* n, char* pN, char* em, char* j)
+	NameCard(const char* n, const char* pN, const char* em, const char* j)
 	{
 		int i = 0;
 		while (n[i] != '\0') i++;
@@ -127,8 +127,9 @@ public:
 		i = 0;
 		while (n[i] != '\0')
 		{
-			name[i] = n[i++];
-		}
+			name[i] = n[i];
+			i++;
+		} name[i] = '\0';
 
 		i = 0;
 		while (pN[i] != '\0') i++;
@@ -136,24 +137,29 @@ public:
 		i = 0;
 		while (pN[i] != '\0')
 		{
-			phoneNumber[i] = pN[i++];
-		}
+			phoneNumber[i] = pN[i];
+			i++;
+		} phoneNumber[i] = '\0';
 
 		i = 0;
 		while (em[i] != '\0') i++;
 		email = new char[i + 1];
+		i = 0;
 		while (em[i] != '\0')
 		{
-			email[i] = em[i++];
-		}
+			email[i] = em[i];
+			i++;
+		} email[i] = '\0';
 
 		i = 0;
 		while (j[i] != '\0') i++;
-		job = new char[i++];
+		job = new char[i + 1];
+		i = 0;
 		while (j[i] != '\0')
 		{
-			job[i] = j[i++];
-		}
+			job[i] = j[i];
+			i++;
+		} job[i] = '\0';
 	}
 	~NameCard()
 	{

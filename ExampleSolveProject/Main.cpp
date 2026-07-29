@@ -6,6 +6,7 @@ void exam3();
 void exam4();
 void exam5();
 void exam6();
+void exam7();
 
 int main()
 {
@@ -31,6 +32,9 @@ int main()
 		break;
 	case 6:
 		exam6();
+		break;
+	case 7:
+		exam7();
 		break;
 	}
 }
