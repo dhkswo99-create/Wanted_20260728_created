@@ -168,14 +168,15 @@ public:
 		delete[] email;
 		delete[] job;
 	}
-	void ShowData()
+	void ShowData() const
 	{
 		std::cout << "이    름 : " << name
 			<< "\n전화번호 : " << phoneNumber
 			<< "\n이 메 일 : " << email
-			<< "\n직    업 : " << job;
+			<< "\n직    업 : " << job << std::endl;
 	}
 };
+
 
 void exam4()
 {
@@ -214,4 +215,28 @@ void exam7()
 	// NameCard (이름, 전화번호, 이메일, 직업)
 	NameCard jang("Jane Se Yun", "010-000-0000", "abd@def.com", "Lecturer");
 	jang.ShowData();
+}
+void exam8()
+{
+	const int numberOfData = 3;
+	NameCard* namecards[numberOfData] = {};
+	char name[20], phoneNumber[20], email[20], job[20];
+	for (int ix = 0; ix < numberOfData; ++ix)
+	{
+		std::cout << "이    름 : ";
+		std::cin >> name;
+		std::cout << "전화번호 : ";
+		std::cin >> phoneNumber;
+		std::cout << "이 메 일 : ";
+		std::cin >> email;
+		std::cout << "직    업 : ";
+		std::cin >> job;
+		namecards[ix] = new NameCard(name, phoneNumber, email, job);
+	}
+	for (NameCard*& namecard : namecards)
+	{
+		namecard->ShowData();
+		delete namecard;
+		namecard = nullptr;
+	}
 }

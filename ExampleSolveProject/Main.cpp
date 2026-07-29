@@ -3,10 +3,11 @@
 void exam1(); // 1-3 1SET
 void exam2();
 void exam3();
-void exam4();
+void exam4(); // 4-7 2SET
 void exam5();
 void exam6();
 void exam7();
+void exam8();
 
 int main()
 {
@@ -35,6 +36,9 @@ int main()
 		break;
 	case 7:
 		exam7();
+		break;
+	case 8:
+		exam8();
 		break;
 	}
 }

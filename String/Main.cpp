@@ -1,5 +1,8 @@
 ﻿#include <iostream>
 #include <string>
+#include <windows.h>
+#include <string>
+
 class Player
 {
 public:
@@ -9,7 +12,7 @@ public:
 		size_t length = strlen(name) + 1;
 		this->name = new char[length];
 		//문자열복사
-		strcpy_s()
+		strcpy_s(this->name, length, name);
 
 
 		//값 저장.
@@ -49,8 +52,17 @@ int main()
 	//nameArray[1] = '\0';
 	//nameArray[2] = 'n';
 	//nameArray[3] = '\0';
-
+	const wchar_t* wcName = L"WanjaeC";
+	//windosw 타입
+	// WCHAR
+	
+	//STL 문자열 타입
+	std::string nameString = "Wanjae Choi";
+	std::cout << nameString << "\n";
+	std::cout << nameString.size() << "\n";
 	//문자열 크기(문자 갯수)
+	//std::string 을 C-Raw string으로 
+	const char* rawName = nameString.c_str();
 	size_t length = strlen(name);
 	std::cout << "string length : " << length << '\n';
 	std::cin.get();
