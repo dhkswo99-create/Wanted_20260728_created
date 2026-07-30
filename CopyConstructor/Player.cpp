@@ -26,15 +26,6 @@ Player::Player(const Player& other)
 	std::cout << "Player(const Player& other) called\n";
 }
 
-Player::~Player()
-{
-	if (name)
-	{
-		delete[] name;
-		name = nullptr;
-	}
-}
-
 Player& Player::operator=(const Player& other)
 {
 	//복사처리
@@ -44,4 +35,15 @@ Player& Player::operator=(const Player& other)
 	std::cout << "operator=(const Player& other)\n";
 	return *this;
 }
+
+Player::~Player()
+{
+	if (name)
+	{
+		delete[] name;
+		name = nullptr;
+	}
+}
+
+
 

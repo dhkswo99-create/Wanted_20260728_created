@@ -16,4 +16,5 @@
   <Project Path="Project1/Project1.vcxproj" Id="10307552-39ff-411f-b98d-1b48b8c8e782" />
   <Project Path="SolutionBulid/SolutionBulid.vcxproj" Id="3869de2f-4338-4147-a06a-19ead83945c4" />
   <Project Path="String/String.vcxproj" Id="0674ad27-a933-4adb-8643-3a463fe4b269" />
+  <Project Path="Virtual/Virtual.vcxproj" Id="ff66a354-a212-4279-ad1a-4f266e2d912f" />
 </Solution>

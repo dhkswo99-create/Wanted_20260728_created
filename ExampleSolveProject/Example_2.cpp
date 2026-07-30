@@ -161,6 +161,38 @@ public:
 			i++;
 		} job[i] = '\0';
 	}
+	NameCard(const NameCard& other)
+	{
+		size_t length = strlen(other.name) + 1;
+		name = new char[length] {};
+		strcpy_s(name, length, other.name);
+		length = strlen(other.phoneNumber) + 1;
+		phoneNumber = new char[length] {};
+		strcpy_s(phoneNumber, length, other.phoneNumber);
+		length = strlen(other.email) + 1;
+		email = new char[length] {};
+		strcpy_s(email, length, other.email);
+		length = strlen(other.job) + 1;
+		job = new char[length] {};
+		strcpy_s(job, length, other.job);
+	}
+	NameCard& operator=(const NameCard& other)
+	{
+		size_t length = strlen(other.name) + 1;
+		name = new char[length] {};
+		strcpy_s(name, length, other.name);
+		length = strlen(other.phoneNumber) + 1;
+		phoneNumber = new char[length] {};
+		strcpy_s(phoneNumber, length, other.phoneNumber);
+		length = strlen(other.email) + 1;
+		email = new char[length] {};
+		strcpy_s(email, length, other.email);
+		length = strlen(other.job) + 1;
+		job = new char[length] {};
+		strcpy_s(job, length, other.job);
+		std::cout << "operator=(const Player& other)\n";
+		return *this;
+	}
 	~NameCard()
 	{
 		delete[] name;
@@ -239,4 +271,10 @@ void exam8()
 		delete namecard;
 		namecard = nullptr;
 	}
+}
+void exam9()
+{
+	NameCard Jang = NameCard("JangSeYun", "010-000-0000", "abd@def.com", "Lecturer");
+	NameCard Jang2(Jang);
+	Jang2.ShowData();
 }

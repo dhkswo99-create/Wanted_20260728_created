@@ -45,5 +45,3 @@ void exam3()
 		std::cout << inputNumber << " x " << i << " = " << (inputNumber * i) << "\n";
 	}
 }
-
-_aadd_i32

@@ -1,43 +1,43 @@
 #include <iostream>
 
-class Person
+class Base
 {
 public:
-	void Sleep()
+	Base()
 	{
-		std::cout << "Sleep\n";
+		std::cout << "Base() called\n";
+	}
+	~Base()
+	{
+		std::cout << "~Base() called\n";
+	}
+	void Play()
+	{
+
 	}
 };
 
-class Student : public Person
+class Derived : public Base
 {
 public:
-	void Study()
+	Derived()
 	{
-		std::cout << "Study\n";
+		std::cout << "Derived() called\n";
 	}
-};
-
-class PartTimeStudent : public Student
-{
-public:
-	void Work()
+	~Derived()
 	{
-		std::cout << "Work\n";
+		std::cout << "~Derived() called\n";
+	}
+	void Attack()
+	{
+		Base* b = new Derived();
+		b->Play(); //가능
+		//b->Attack(); //불가능
+		//Derived d = new Base(); //불가능
 	}
 };
 
 int main()
 {
-	Person personObject;
-	Student studentObject;
-	PartTimeStudent partTimeStudentObject;
-
-	Person* person1 = &personObject;
-	Person* person2 = &studentObject;
-	PartTimeStudent* person3 = &partTimeStudentObject;
-	//여러 객체를 한 타입으로 다루려고 할 때 이를 다형성이라 한다.
-	person1->Sleep();
-	person2->Sleep();
-	person3->Work();
+	Derived* d;
 }
