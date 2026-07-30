@@ -46,6 +46,4 @@ void exam3()
 	}
 }
 
-
-
-
+_aadd_i32
