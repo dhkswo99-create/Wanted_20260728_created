@@ -86,6 +86,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Example4.cpp" />
     <ClCompile Include="ExampleSolve3.cpp" />
     <ClCompile Include="Example_1.cpp" />
     <ClCompile Include="Example_2.cpp" />

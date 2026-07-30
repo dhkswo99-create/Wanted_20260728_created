@@ -9,6 +9,8 @@ void exam6();
 void exam7();
 void exam8();
 void exam9();
+void exam10();
+void exam11();
 
 int main()
 {
@@ -43,6 +45,12 @@ int main()
 		break;
 	case 9:
 		exam9();
+		break;
+	case 10:
+		exam10();
+		break;
+	case 11:
+		exam11();
 		break;
 	}
 }
