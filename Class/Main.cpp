@@ -75,7 +75,9 @@ int main()
 
 	Manager manager(players[1]);
 	manager.Test();
-
+	std::string name = typeid(manager).name();
+	std::cout
+		<< name;
 	// 객체 소멸 및 null.
 	for (Player*& player : players)
 	{
