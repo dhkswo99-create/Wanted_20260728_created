@@ -9,6 +9,7 @@
   <Project Path="CopyConstructor/CopyConstructor.vcxproj" Id="7308eb44-1ee6-4bbe-8019-addebb10da48" />
   <Project Path="CustomRTTI/CustomRTTI.vcxproj" Id="7d72aae5-e2e7-4a11-9abe-42011c018124" />
   <Project Path="ExampleSolveProject/ExampleSolveProject.vcxproj" Id="c8d946cd-7ae8-410d-84d4-350c2984f7bf" />
+  <Project Path="FileIO_C/FileIO_C.vcxproj" Id="f447734b-1de8-4d7e-8bcb-6136aab9646f" />
   <Project Path="ForwardDeclaration/ForwardDeclaration.vcxproj" Id="79e48a37-6d43-466b-a875-63e6df04112e" />
   <Project Path="Inline/Inline.vcxproj" Id="d6ef9760-883b-4a95-bada-f4e31af43390" />
   <Project Path="ObjectArray/ObjectArray.vcxproj" Id="c8c93a32-d73d-49df-99f4-abcdd07b0dba" />

@@ -4,7 +4,6 @@
 class Actor : public CraftObject
 {
 	TYPE_DELARATIONS(Actor, CraftObject)
-
 };
 
 class Player :public Actor
@@ -29,7 +28,6 @@ int main()
 	{
 		std::cout << "실패\n";
 	}
-
 }
 
 
