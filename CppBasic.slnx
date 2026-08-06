@@ -18,6 +18,7 @@
   <Project Path="Pointer/Pointer.vcxproj" Id="e9fcb9d1-d3a9-4d99-89a4-5c13ccc92003" />
   <Project Path="Project1/Project1.vcxproj" Id="10307552-39ff-411f-b98d-1b48b8c8e782" />
   <Project Path="RTTI/RTTI.vcxproj" Id="e986fafd-8626-417c-b2db-b03aa83d2167" />
+  <Project Path="SharedPtr/SharedPtr.vcxproj" Id="6d257cd7-5a3f-49ef-aa97-d7a6dd279b7c" />
   <Project Path="SolutionBulid/SolutionBulid.vcxproj" Id="3869de2f-4338-4147-a06a-19ead83945c4" />
   <Project Path="Static/Static.vcxproj" Id="fe3698c7-00b7-4b86-b9c1-a74c2c299a02" />
   <Project Path="String/String.vcxproj" Id="0674ad27-a933-4adb-8643-3a463fe4b269" />
