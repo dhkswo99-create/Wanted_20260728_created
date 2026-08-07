@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 
 class Actor
@@ -52,13 +52,54 @@ private:
 	char* name;
 };
 
+//함수 오버로딩 : 같은 이름의 함수가 여러 개 배치되는 형태.
+void Use(int& value)
+{
+	std::cout << "void Use(int& value)\n";
+}
+void Use(int&& value) 
+{
+	std::cout << "void Use(float& value)\n";
+}
+
+class Item
+{
+public:
+	virtual ~Item() = default;
+};
+
+void Test(Item& item)
+{
+	std::cout << "void Test&\n";
+}
+void Test(Item&& item)
+{
+	std::cout << "void Test&&\n";
+
+}
+
+
+template<typename T>
+void Function(T&& value)
+{
+	Test(std::forward<T>(value)); //Perfect Forwarding. 받은 R값참조가 그대로 전달될 수 있게 만듦.
+}
 
 
 int main()
 {
-	const char*  actor2Name = "TestActor";
-	Actor actor1("Test"); // R밸류를 대입하는 중 그래서 오류.
-	Actor actor2(actor2Name);
+	Item item;
+	Function(item);
+	Function(Item());
+
+	//std::unique_ptr<Actor> actor1 = std::make_unique<Actor>();
+	//std::unique_ptr<Actor> actor2 = std::move(actor1);
+	//move ->> 뭘 받던 다 지우고 &&를 붙여버려서 이동 처리함.
+
+
+	//const char*  actor2Name = "TestActor";
+	//Actor actor1("Test"); // R밸류를 대입하는 중 그래서 오류.
+	//Actor actor2(actor2Name);
 
 	int count =  10; // count == L value 메모리 차지, 이름 가짐 변경 가능
 	// 10은 Rvalue 정수 리터럴, 임시값.. 메모리 X 이름 X 변경 X
@@ -67,9 +108,14 @@ int main()
 	int& lRdf = count;
 	//int& lRef2 = 10; 오류
 	
+	
 	//R-value Reference
 	int&& rRef = 10;
 	//int&& rRef = count; 오류.
-	rRef = 20;
+	//int&& rRef2 = rRef; //받은 애는 표현식의 밸류값을 따라간다
+	//int value = 10;
+	//Use(value);
+	//Use(std::move(value));
+
 
 }
